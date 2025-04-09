@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VictimRoll.MainPage"
+             >
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="30" Spacing="25.0">
+
+            
+
+            <Grid>
+                <HorizontalStackLayout  Padding="20" HorizontalOptions="Start">
+                    <Entry x:Name="newClassEntry" Placeholder="Nowa klasa" Margin="20" BackgroundColor="White"/>
+                    <Button Text="Utwórz klasę" Clicked="OnCreateClassClicked" Margin="20"/>
+                    <Button Text="Usuń klasę" Clicked="OnDeleteClassClicked" Margin="20"/>
+                </HorizontalStackLayout>
+
+
+                <Picker x:Name="classPicker" Title="Wybierz klasę" SelectedIndexChanged="OnClassSelected" HorizontalOptions="Center"  Margin="20" WidthRequest="450" TextColor="{StaticResource Primary}" BackgroundColor="White" TitleColor="White"/>
+
+                   
+                
+                <HorizontalStackLayout HorizontalOptions="End" Padding="20">
+                    <Entry x:Name="victimEntry" Placeholder="Wyznawca" Margin="20" BackgroundColor="White" />
+                <Button Text="Dodaj" Clicked="OnAddStudentClicked" Margin="20"/>
+                <Button Text="Usuń" Clicked="OnRemoveStudentClicked" Margin="20" />
+            </HorizontalStackLayout>
+           </Grid>
+
+
+            <ListView x:Name="victimList" HorizontalOptions="Center" RowHeight="25"/>
+
+
+
+
+            <Button Text="Losuj ofiarę" Clicked="OnDrawStudentClicked" WidthRequest="200"/>
+            <Label x:Name="drawResult" Text="" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" TextColor="White"/>
+
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
