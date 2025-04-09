@@ -23,7 +23,7 @@
                    
                 
                 <HorizontalStackLayout HorizontalOptions="End" Padding="20">
-                    <Entry x:Name="victimEntry" Placeholder="Wyznawca" Margin="20" BackgroundColor="White" />
+                    <Entry x:Name="victimEntry" Placeholder="Nowy uczeń" Margin="20" BackgroundColor="White" />
                 <Button Text="Dodaj" Clicked="OnAddStudentClicked" Margin="20"/>
                 <Button Text="Usuń" Clicked="OnRemoveStudentClicked" Margin="20" />
             </HorizontalStackLayout>
@@ -36,7 +36,7 @@
 
 
             <Button Text="Losuj ofiarę" Clicked="OnDrawStudentClicked" WidthRequest="200"/>
-            <Label x:Name="drawResult" Text="" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" TextColor="White"/>
+            <Label x:Name="drawResult" Text="" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center"/>
 
             
 
