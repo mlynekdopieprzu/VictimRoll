@@ -82,12 +82,18 @@ namespace VictimRoll
 
         private async void OnDrawStudentClicked(object sender, EventArgs e)
         {
+            string classVar = selectedClass;
             if (victims.Count > 1)
             {
                 var random = new Random();
                 int index;
                 for (int i = 0; i < 250; i++)
                 {
+                    if (selectedClass != classVar)
+                    {
+                        drawResult.Text = "Nie wybrano listy lub wybrana lista jest pusta";
+                        break;            
+                    }
                     index = random.Next(victims.Count);
                     if (i == 249)
                     {
