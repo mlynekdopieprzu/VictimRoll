@@ -8,7 +8,7 @@
     Title="VictimRoll">
 
     <ShellContent
-        Title="Losowanie ofiary do odpowiedzi"
+        Title="Losowanie ucznia do odpowiedzi"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
